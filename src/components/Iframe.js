@@ -7,7 +7,7 @@ function Iframe({ title, year }) {
     getMovieTrailer(title, year).then((data) => {
       setUrl(`https://youtube.com/embed/${data.items[0].id.videoId}`);
     });
-  }, []);
+  }, [title, year]);
   return (
     <iframe src={url} title="Youtube Trailer" allowFullScreen={true}></iframe>
   );

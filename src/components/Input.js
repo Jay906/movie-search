@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 function Input({ input, onInputChange }) {
   return (
     <div>
