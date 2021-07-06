@@ -1,38 +1,100 @@
-.App {
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+  padding: 1rem;
+}
+
+.suggestions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 4px;
+  padding: 0 2rem;
+  margin: 1.5rem 0;
+}
+
+input {
+  display: block;
+  margin: 1rem auto 0 auto;
+  width: 80%;
+  background: #f4f4f4;
+  transition: all 0.3s;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+}
+
+input:focus {
+  background: #fff;
+}
+
+.suggestion {
+  text-align: center;
+  min-height: 325px;
+}
+
+.loading-page {
+  height: 500px;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-movie {
+  margin: 1.5rem auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.single-movie-image {
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.single-movie-content {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.single-movie p {
+  margin: 0.75rem 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.single-movie-trailer {
+  width: 90%;
+  height: auto;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.single-movie-trailer iframe {
+  border: none;
+  outline: none;
+  width: 320px;
+  height: 200px;
+}
+
+@media screen and (min-width: 720px) {
+  .single-movie-trailer {
+    width: 100%;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  .single-movie-trailer iframe {
+    width: 320px;
+    height: 200px;
+    border-radius: 15px;
   }
 }
